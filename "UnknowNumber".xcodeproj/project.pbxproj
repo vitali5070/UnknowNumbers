@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E8E19A02450543400272D69 /* "UnknowNumber" */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "\"UnknowNumber\""; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8E19A02450543400272D69 /* "UnknowNumber" */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = "\"UnknowNumber\""; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8E19A32450543400272D69 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

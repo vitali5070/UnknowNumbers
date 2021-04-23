@@ -9,15 +9,15 @@
 import Foundation
 import Darwin
 
-print("This app can solve a quadratic equation.")
 
+let randomDefaultValue = Double(arc4random())
 getVaribles()
-    
+
 func getVaribles() {
     print("Enter three numbers please.")
-    let a = set(varible: "a")
-    let b = set(varible: "b")
-    let c = set(varible: "c")
+    let a = set(varible: "a", defaultValue: randomDefaultValue)
+    let b = set(varible: "b", defaultValue: randomDefaultValue)
+    let c = set(varible: "c", defaultValue: randomDefaultValue)
     equation(a: a, b: b, c: c)
 }
 
@@ -66,11 +66,19 @@ func get(answer: String) {
     }
 }
 
-func set(varible:String) -> Double {
+func set(varible:String, defaultValue:Double) -> Double {
     print("\(varible) = ")
-    guard let stringValue = readLine(), let doubleValue = Double(stringValue)  else {
-        print("Check that value for \(varible) is number and correct, pleas try again")
-        return set(varible: varible)
+    let input = readLine()
+    if let stringValue = input, let doubleValue = Double(stringValue) {
+        return doubleValue
     }
-    return doubleValue
+    else if input == "" {
+        print("\(randomDefaultValue)")
+        return randomDefaultValue
+    }
+    else
+    {
+        print("Check that value for \(varible) is number and correct, please try again")
+        return set(varible: varible, defaultValue: randomDefaultValue)
+    }
 }
